@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { SafeImage } from '../common/SafeImage';
 import {
   LayoutDashboard,
   Sprout,
@@ -146,9 +147,10 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         <div className="pt-4 border-t border-[#A5D6A7]/30 space-y-2">
           {/* Admin User Chip */}
           <div className="flex items-center gap-3 p-2 rounded-xl bg-[#F8FFF5] border border-[#A5D6A7]/40">
-            <img
+            <SafeImage
               src={adminUser.photo}
               alt={adminUser.name}
+              fallbackSrc="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
               className="w-8 h-8 rounded-full object-cover border border-[#66BB6A]"
             />
             <div className="flex-1 min-w-0">

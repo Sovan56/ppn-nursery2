@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { User, Save, Lock, ShieldCheck } from 'lucide-react';
+import { SafeImage } from '../common/SafeImage';
 
 export const AdminProfile: React.FC = () => {
   const { adminUser, updateAdminProfile, addToast } = useApp();
@@ -59,9 +60,10 @@ export const AdminProfile: React.FC = () => {
         </h3>
 
         <div className="flex items-center gap-4">
-          <img
+          <SafeImage
             src={photo}
             alt={name}
+            fallbackSrc="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
             className="w-16 h-16 rounded-full object-cover border-2 border-[#66BB6A] shadow-soft"
           />
           <div className="flex-1">

@@ -11,6 +11,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const AboutSection: React.FC = () => {
   const { navigateTo } = useApp();
@@ -45,7 +46,7 @@ export const AboutSection: React.FC = () => {
             className="lg:col-span-6 relative"
           >
             <div className="relative">
-              <img
+              <SafeImage
                 src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=800&q=80"
                 alt="PPN Nursery Greenery Bengaluru"
                 className="w-full h-96 sm:h-[450px] object-cover rounded-3xl shadow-soft-lg border-2 border-[#A5D6A7]/30"
@@ -53,8 +54,8 @@ export const AboutSection: React.FC = () => {
 
               {/* Inset Secondary Image */}
               <div className="hidden sm:block absolute -bottom-8 -right-6 w-56 h-56 rounded-3xl overflow-hidden border-4 border-white shadow-soft-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=400&q=80"
+                <SafeImage
+                  src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80"
                   alt="Bonsai and Saplings"
                   className="w-full h-full object-cover"
                 />

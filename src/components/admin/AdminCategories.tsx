@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { Category } from '../../types';
 import { FolderTree, Plus, Edit2, Trash2, X } from 'lucide-react';
+import { SafeImage } from '../common/SafeImage';
 
 export const AdminCategories: React.FC = () => {
   const { categories, addCategory, updateCategory, deleteCategory } = useApp();
@@ -73,7 +74,7 @@ export const AdminCategories: React.FC = () => {
           >
             <div>
               <div className="relative h-40 rounded-2xl overflow-hidden mb-3">
-                <img src={cat.image} alt={cat.name} className="w-full h-full object-cover" />
+                <SafeImage src={cat.image} alt={cat.name} className="w-full h-full object-cover" />
                 <span
                   className={`absolute top-3 right-3 text-[10px] font-bold px-2.5 py-0.5 rounded-full ${
                     cat.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-gray-200 text-gray-800'

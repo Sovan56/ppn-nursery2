@@ -2,6 +2,7 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { Star, Quote, CheckCircle2, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const ReviewsSection: React.FC = () => {
   const { testimonials, settings } = useApp();
@@ -69,9 +70,10 @@ export const ReviewsSection: React.FC = () => {
 
               {/* Customer Info Footer */}
               <div className="pt-4 border-t border-[#A5D6A7]/20 flex items-center gap-3">
-                <img
+                <SafeImage
                   src={item.photo}
                   alt={item.name}
+                  fallbackSrc="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
                   className="w-11 h-11 rounded-full object-cover border-2 border-[#66BB6A]"
                 />
                 <div className="flex-1 min-w-0">

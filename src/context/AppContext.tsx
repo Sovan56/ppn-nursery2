@@ -111,17 +111,17 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  PLANTS: 'ppn_nursery_plants_v1',
-  CATEGORIES: 'ppn_nursery_categories_v1',
-  GALLERY: 'ppn_nursery_gallery_v1',
-  TESTIMONIALS: 'ppn_nursery_testimonials_v1',
-  SERVICES: 'ppn_nursery_services_v1',
-  FAQS: 'ppn_nursery_faqs_v1',
-  INQUIRIES: 'ppn_nursery_inquiries_v1',
-  SETTINGS: 'ppn_nursery_settings_v1',
-  ADMIN_USER: 'ppn_nursery_admin_user_v1',
-  IS_LOGGED_IN: 'ppn_nursery_is_logged_in_v1',
-  LOGS: 'ppn_nursery_logs_v1'
+  PLANTS: 'ppn_nursery_plants_v2',
+  CATEGORIES: 'ppn_nursery_categories_v2',
+  GALLERY: 'ppn_nursery_gallery_v2',
+  TESTIMONIALS: 'ppn_nursery_testimonials_v2',
+  SERVICES: 'ppn_nursery_services_v2',
+  FAQS: 'ppn_nursery_faqs_v2',
+  INQUIRIES: 'ppn_nursery_inquiries_v2',
+  SETTINGS: 'ppn_nursery_settings_v2',
+  ADMIN_USER: 'ppn_nursery_admin_user_v2',
+  IS_LOGGED_IN: 'ppn_nursery_is_logged_in_v2',
+  LOGS: 'ppn_nursery_logs_v2'
 };
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {

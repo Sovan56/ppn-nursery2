@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { GalleryItem } from '../../types';
 import { ImageIcon, Plus, Trash2, Edit2, X, Upload } from 'lucide-react';
+import { SafeImage } from '../common/SafeImage';
 
 export const AdminGallery: React.FC = () => {
   const { gallery, addGalleryItem, updateGalleryItem, deleteGalleryItem } = useApp();
@@ -73,7 +74,7 @@ export const AdminGallery: React.FC = () => {
           >
             <div>
               <div className="relative h-48">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                <SafeImage src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 <span className="absolute top-3 left-3 bg-white/90 text-[#2E7D32] text-[10px] font-bold px-2.5 py-0.5 rounded-full">
                   {item.category}
                 </span>
