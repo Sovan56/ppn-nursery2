@@ -1,0 +1,6 @@
+{
+  "name": "PPN Nursery",
+  "description": "Premium Garden Center in Bengaluru, Karnataka offering indoor plants, outdoor plants, fruit saplings, garden accessories, and landscaping services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
