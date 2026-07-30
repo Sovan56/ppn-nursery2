@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { X, Sprout, Send, Phone, MessageSquare } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 export const EnquiryModal: React.FC = () => {
   const { enquiryPlant, setEnquiryPlant, addInquiry, settings } = useApp();
@@ -63,7 +64,7 @@ export const EnquiryModal: React.FC = () => {
 
         {/* Selected Plant Card Summary */}
         <div className="p-4 bg-[#F8FFF5] border-b border-[#A5D6A7]/30 flex items-center gap-4">
-          <img
+          <SafeImage
             src={enquiryPlant.image}
             alt={enquiryPlant.name}
             className="w-16 h-16 rounded-2xl object-cover border border-[#A5D6A7]"

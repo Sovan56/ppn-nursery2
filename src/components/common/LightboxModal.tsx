@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { X, ZoomIn } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 export const LightboxModal: React.FC = () => {
   const { lightboxImage, setLightboxImage } = useApp();
@@ -24,7 +25,7 @@ export const LightboxModal: React.FC = () => {
         </button>
 
         <div className="bg-black flex items-center justify-center max-h-[75vh] overflow-hidden">
-          <img
+          <SafeImage
             src={lightboxImage.url}
             alt={lightboxImage.title}
             className="w-full h-full object-contain max-h-[75vh]"

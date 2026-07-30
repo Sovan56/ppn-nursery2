@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { Sprout, ZoomIn, Eye } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const GallerySection: React.FC = () => {
   const { gallery, setLightboxImage } = useApp();
@@ -66,7 +67,7 @@ export const GallerySection: React.FC = () => {
               }
               className="group relative h-72 rounded-3xl overflow-hidden shadow-soft hover:shadow-soft-lg border border-[#A5D6A7]/40 cursor-pointer"
             >
-              <img
+              <SafeImage
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

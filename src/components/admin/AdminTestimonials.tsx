@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { Testimonial } from '../../types';
 import { MessageSquare, Plus, Edit2, Trash2, Star, X } from 'lucide-react';
+import { SafeImage } from '../common/SafeImage';
 
 export const AdminTestimonials: React.FC = () => {
   const { testimonials, addTestimonial, updateTestimonial, deleteTestimonial } = useApp();
@@ -100,7 +101,12 @@ export const AdminTestimonials: React.FC = () => {
 
             <div className="pt-3 border-t border-[#A5D6A7]/20 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img src={item.photo} alt={item.name} className="w-9 h-9 rounded-full object-cover" />
+                <SafeImage
+                  src={item.photo}
+                  alt={item.name}
+                  fallbackSrc="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                  className="w-9 h-9 rounded-full object-cover"
+                />
                 <div>
                   <h4 className="font-bold text-xs text-[#2E7D32] font-['Poppins']">{item.name}</h4>
                   <p className="text-[10px] text-[#355E3B]/70">{item.location}</p>

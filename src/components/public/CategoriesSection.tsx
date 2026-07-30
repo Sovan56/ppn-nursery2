@@ -2,6 +2,7 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { Sprout, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const CategoriesSection: React.FC = () => {
   const { categories, navigateTo, setSelectedCategory } = useApp();
@@ -42,7 +43,7 @@ export const CategoriesSection: React.FC = () => {
             >
               <div>
                 <div className="relative h-44 rounded-2xl overflow-hidden mb-4">
-                  <img
+                  <SafeImage
                     src={cat.image}
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"

@@ -11,6 +11,7 @@ import {
   Award
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const HeroSection: React.FC = () => {
   const { navigateTo, settings } = useApp();
@@ -112,7 +113,7 @@ export const HeroSection: React.FC = () => {
             className="lg:col-span-5 relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border-4 border-white bg-white p-2">
-              <img
+              <SafeImage
                 src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80"
                 alt="PPN Nursery Plants Display Bengaluru"
                 className="w-full h-80 sm:h-96 object-cover rounded-2xl"

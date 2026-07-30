@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { Plant } from '../../types';
+import { SafeImage } from '../common/SafeImage';
 import {
   Sprout,
   Plus,
@@ -186,7 +187,7 @@ export const AdminPlants: React.FC = () => {
               {paginatedPlants.map((plant) => (
                 <tr key={plant.id} className="hover:bg-[#F8FFF5] transition-colors">
                   <td className="py-3 px-4">
-                    <img
+                    <SafeImage
                       src={plant.image}
                       alt={plant.name}
                       className="w-12 h-12 rounded-xl object-cover border border-[#A5D6A7]"

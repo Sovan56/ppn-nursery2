@@ -11,6 +11,7 @@ import {
   Heart
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SafeImage } from '../common/SafeImage';
 
 export const FeaturedPlantsSection: React.FC = () => {
   const {
@@ -119,7 +120,7 @@ export const FeaturedPlantsSection: React.FC = () => {
                 <div>
                   {/* Image & Badges */}
                   <div className="relative h-52 rounded-2xl overflow-hidden mb-4">
-                    <img
+                    <SafeImage
                       src={plant.image}
                       alt={plant.name}
                       className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
